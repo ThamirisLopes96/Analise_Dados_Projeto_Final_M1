@@ -32,7 +32,13 @@ NESTE SCRIPT, REALIZAMOS:
 ** Calcula duracao_dias.
 ------------------------------------------------------------------------------
 """
+import sys
+from pathlib import Path
 
+raiz = Path(__file__).resolve().parent.parent
+if str(raiz) not in sys.path:
+    sys.path.append(str(raiz))
+    
 import banco
 
 # ============================================================
